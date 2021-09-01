@@ -1,0 +1,13 @@
+nav  { 
+    display: flex;
+    justify-content: space-between;
+
+    div { 
+        display: flex;
+        flex-direction: row;
+
+        h2 {
+            margin: 0 10px;
+        }
+    }
+}
