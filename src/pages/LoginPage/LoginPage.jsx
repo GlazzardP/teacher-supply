@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "./LoginPage.module.scss";
 
-const LoginPage = () => {
+const LoginPage = (props) => {
+  const {signIn} = props;
   return (
     <>
-      <p>LoginPage works</p>
+      <p>Google: </p>
+        <button onClick={() => signIn()} >Log in</button>
+
     </>
   );
 };
