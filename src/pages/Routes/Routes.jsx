@@ -49,7 +49,7 @@ const Routes = () => {
   const userExistJsx = () => { 
     if(user){ 
     return (
-      <p>User exists</p>
+      <p>User: {user.email}</p>
     )
   } else { 
     return (
@@ -57,6 +57,8 @@ const Routes = () => {
     )
   }
   }
+
+  console.log(user);
   return (
     <>
         <Router>
@@ -96,7 +98,7 @@ const Routes = () => {
         <ContactUsTest />
       </Route>
       <Route path="/Account">
-        <LoginPage  signIn={signIn} />
+        <LoginPage  signIn={signIn} setUser={setUser} />
       </Route>
 
     </Switch>
