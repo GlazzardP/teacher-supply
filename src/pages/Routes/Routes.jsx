@@ -65,20 +65,15 @@ const Routes = () => {
             <h1>Teacher Supply</h1>
           </Link>
           {userExistJsx()}
-
-
         <div>
-  {/* <button onClick={() => signIn()} >Log in</button> */}
-  <button onClick={() => logOut()} >Log Out</button>
+          <button onClick={() => logOut()} >Log Out</button>
           <Link to="/About"><h2>About Us</h2></Link>
           <Link to="/Blog"><h2> blog test</h2></Link>
           <Link to="/Contact"><h2>contact us</h2> </Link>
           <Link to="/Account"><h2>Account</h2> </Link>
-
-
         </div>
 
-          </nav>
+      </nav>
 
 
 

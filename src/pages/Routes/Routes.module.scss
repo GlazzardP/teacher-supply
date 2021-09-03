@@ -1,6 +1,10 @@
+@import "../../assets/variables.scss";
+
 nav  { 
     display: flex;
     justify-content: space-between;
+    background-color: $egg-yellow;
+    padding: 48px;
 
     div { 
         display: flex;
