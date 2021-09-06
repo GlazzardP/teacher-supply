@@ -11,6 +11,8 @@ import BlogTest from "../BlogTest";
 import ContactUsTest from "../ContactUsTest";
 import LoginPage from "../LoginPage";
 import Home from "../Home";
+import AppPage from "../AppPage";
+
 import NavBar from "../../organisms/NavBar/NavBar";
 import { getAuth, signInWithRedirect, signOut, onAuthStateChanged  } from "firebase/auth";
 import  { provider }  from "../../firebase"
@@ -49,7 +51,7 @@ const Routes = () => {
   const userExistJsx = () => { 
     if(user){ 
     return (
-      <p>User exists</p>
+      <p>User: {user.email}</p>
     )
   } else { 
     return (
@@ -57,6 +59,8 @@ const Routes = () => {
     )
   }
   }
+
+  console.log(user);
   return (
     <>
         <Router>
@@ -67,10 +71,12 @@ const Routes = () => {
           {userExistJsx()}
         <div>
           <button onClick={() => logOut()} >Log Out</button>
+          <Link to="/App"><h2>App</h2> </Link>
           <Link to="/About"><h2>About Us</h2></Link>
           <Link to="/Blog"><h2> blog test</h2></Link>
           <Link to="/Contact"><h2>contact us</h2> </Link>
           <Link to="/Account"><h2>Account</h2> </Link>
+
         </div>
 
       </nav>
@@ -80,6 +86,9 @@ const Routes = () => {
     <Switch>
       <Route exact path="/">
          <Home />
+      </Route>
+            <Route path="/App">
+      <AppPage />
       </Route>
       <Route path="/About">
       <AboutUs />
@@ -91,7 +100,7 @@ const Routes = () => {
         <ContactUsTest />
       </Route>
       <Route path="/Account">
-        <LoginPage  signIn={signIn} />
+        <LoginPage  signIn={signIn} setUser={setUser} />
       </Route>
 
     </Switch>

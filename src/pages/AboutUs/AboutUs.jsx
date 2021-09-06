@@ -1,11 +1,5 @@
 import React from "react";
 import styles from "./AboutUs.module.scss";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
 
 
 

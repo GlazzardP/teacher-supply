@@ -1,0 +1,16 @@
+.appPage { 
+    width: 100vw;
+    height: 100vh;
+    border: solid red 1px;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    .sideNav { 
+        left: 0;
+        height: 100%;
+        width: fit-content;
+        border: solid black 1px;
+        margin: none;
+
+    }
+}

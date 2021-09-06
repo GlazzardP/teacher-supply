@@ -1,0 +1,46 @@
+.homepage { 
+    section { 
+        display: grid;
+        grid-template-columns: auto auto;
+
+        margin-top: 75px;
+
+        div { 
+            width: 300px;
+            padding: 24px;
+
+    
+            p { 
+                padding: 12px 0;
+            }
+        }
+    
+        img { 
+            // width: 500px;
+            height: 500px;
+            border: solid black 1px;
+        }
+    }
+
+    .benefits { 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        // margin: auto;
+        width: 100vw;
+        margin-top: 100px;
+
+        div { 
+            width: 250px;
+            text-align: center;
+
+            h3 { 
+                margin: 12px 0;
+            }
+
+            img { 
+                height: 48px;
+            }
+        }
+    }
+}
